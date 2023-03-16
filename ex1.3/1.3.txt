@@ -1,0 +1,12 @@
+Commands:
+
+docker container run -d devopsdockeruh/simple-web-service:ubuntu
+docker exec -it funny_lewin bash
+
+Command inside the container:
+
+root@8f41c84afb79:/usr/src/app# tail -f ./text.log
+
+Secret message:
+
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
