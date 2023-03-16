@@ -1,0 +1,19 @@
+docker run -it devopsdockeruh/pull_exercise
+
+Input: 
+
+basics
+
+Secret message:
+
+"This is the secret message"
+
+Getting the password without Docker hub by:
+
+docker run -it devopsdockeruh/pull_exercise
+
+docker exec -it *container_name* sh
+
+Then inside the container:
+
+cat README.md
