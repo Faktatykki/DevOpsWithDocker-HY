@@ -1,0 +1,22 @@
+FROM node:16
+
+WORKDIR /usr/src/app
+
+COPY /material-applications/example-frontend/ ./
+
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash && apt-get install -y nodejs
+
+RUN npm install
+
+RUN npm run build
+
+RUN npm install -g serve
+
+CMD [ "serve", "-s", "-l", "5000", "build" ]
+
+#commands:
+#git clone git@github.com:docker-hy/material-applications.git
+#docker build . -f Dockerfile.frontend -t "frontend_exercise14"
+#docker run -p 5000:5000 frontend_exercise14
